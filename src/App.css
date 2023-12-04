@@ -213,4 +213,7 @@ button#jokes > a:hover {
     width: 85vw;
     max-width: 85vw;
   }
+  a#jokes {
+    margin-top: 2vh;
+  }
 }

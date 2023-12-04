@@ -66,7 +66,9 @@ function App() {
               Generate
             </button>
           </div>
-
+          <div className="mt-2" id="mobile-btn">
+            <button onClick={purifyResponse}>Generate</button>
+          </div>
           <div
             className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 p-0 text-center d-flex flex-column mb-2 justify-content-center t1"
             id="response"
@@ -85,9 +87,7 @@ function App() {
             </div>
             <p className="m-0" id="answer"></p>
           </div>
-          <div className="mt-2" id="mobile-btn">
-            <button onClick={purifyResponse}>Generate</button>
-          </div>
+
           <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 joke">
             <p className="text-center">
               Want to make a joke instead?{" "}

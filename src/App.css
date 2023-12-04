@@ -97,6 +97,10 @@ button:hover {
 div.joke {
   padding-top: 15px;
 }
+div.joke > p {
+  margin: 0;
+}
+
 div.footer {
   padding: 15px 0;
   font-size: small;
@@ -113,7 +117,6 @@ a:hover {
 }
 a#jokes {
   border: 2px solid #1a1765;
-  margin-top: 2vh;
   color: #1a1765;
   padding: 3px;
   border-radius: 3px;

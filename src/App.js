@@ -90,7 +90,7 @@ function App() {
               Generate
             </button>
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 d-flex justify-content-center align-items-center joke">
+          <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 d-flex justify-content-center joke">
             <p className="text-center">Want to make a joke instead? </p>
             <a href="https://ai-joke-generator.netlify.app/" id="jokes">
               Click Here

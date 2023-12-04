@@ -99,6 +99,7 @@ div.joke {
 }
 div.joke > p {
   margin: 0;
+  align-self: center;
 }
 
 div.footer {
@@ -135,13 +136,17 @@ button#jokes > a:hover {
   color: #3d8edb;
 }
 /*----------------------------------------------------Make Responsive---------------------------------------------*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   #response {
     background-color: white;
     width: 70vw;
     overflow: hidden;
     max-width: 80vw;
     min-height: 17vh;
+  }
+  input#subject,
+  input#adjective {
+    width: 10vh;
   }
 }
 
@@ -183,6 +188,9 @@ button#jokes > a:hover {
   .prompt {
     margin: 0.75rem 0;
   }
+  .prompt > p {
+    font-size: 1.7vh;
+  }
   input#adjective {
     width: 10vh;
   }
@@ -214,6 +222,10 @@ button#jokes > a:hover {
     max-width: 85vw;
   }
   a#jokes {
-    margin-top: 2vh;
+    font-size: 1.7vh;
+    margin-left: 1vh;
+  }
+  div.joke > p {
+    font-size: 1.7vh;
   }
 }

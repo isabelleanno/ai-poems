@@ -188,7 +188,7 @@ button#jokes > a:hover {
   .prompt {
     margin: 0.75rem 0;
   }
-  .prompt > p {
+  .prompt > * {
     font-size: 1.7vh;
   }
   input#adjective {

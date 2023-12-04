@@ -186,13 +186,11 @@ button#jokes > a:hover {
     display: flex;
     justify-content: center;
   }
-  #mobile-btn button {
+  #mobile-btn button:hover {
     background-color: #3d8edb;
     color: rgb(224, 246, 255);
   }
-  #mobile-btn button:hover {
-    background-color: #265683;
-  }
+
   #logo {
     margin: 0;
   }

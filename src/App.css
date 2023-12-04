@@ -118,6 +118,7 @@ a:hover {
 }
 a#jokes {
   border: 2px solid #1a1765;
+  margin-left: 2vh;
   color: #1a1765;
   padding: 3px;
   border-radius: 3px;

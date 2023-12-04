@@ -167,7 +167,7 @@ button#jokes > a:hover {
   }
   .header {
     display: flex;
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
   }
   img#bg,
   img#bg-top {

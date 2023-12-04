@@ -220,7 +220,7 @@ button#jokes > a:hover {
   #response {
     width: 85vw;
     max-width: 85vw;
-    height: 22vh;
+    min-height: 22vh;
   }
   a#jokes {
     font-size: 1.7vh;

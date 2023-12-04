@@ -180,10 +180,10 @@ button#jokes > a:hover {
     margin: 0.75rem 0;
   }
   input#adjective {
-    width: 12vh;
+    width: 10vh;
   }
   input#subject {
-    width: 13vh;
+    width: 8vh;
   }
   #desktop-btn {
     display: none;

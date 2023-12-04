@@ -113,10 +113,11 @@ a:hover {
 }
 a#jokes {
   border: 2px solid #1a1765;
+  margin-top: 2vh;
   color: #1a1765;
   padding: 3px;
   border-radius: 3px;
-  background-color: rgb(224, 246, 255);
+  background-color: white;
   text-decoration: none;
 }
 a#jokes:hover {

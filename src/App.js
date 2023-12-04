@@ -47,7 +47,7 @@ function App() {
             />
           </div>
 
-          <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 d-flex mb-4 justify-content-center align-items-center">
+          <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 d-flex justify-content-center align-items-center prompt">
             <p className="d-inline m-0">Write a</p>
             <input
               type="text"
@@ -66,9 +66,7 @@ function App() {
               Generate
             </button>
           </div>
-          <div className="mt-2" id="mobile-btn">
-            <button onClick={purifyResponse}>Generate</button>
-          </div>
+
           <div
             className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 p-0 text-center d-flex flex-column mb-2 justify-content-center t1"
             id="response"
@@ -87,7 +85,11 @@ function App() {
             </div>
             <p className="m-0" id="answer"></p>
           </div>
-
+          <div className="mb-3" id="mobile-btn">
+            <button onClick={purifyResponse} className="px-5">
+              Generate
+            </button>
+          </div>
           <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 joke">
             <p className="text-center">
               Want to make a joke instead?{" "}

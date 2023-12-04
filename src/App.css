@@ -64,7 +64,9 @@ div.row {
 #welcome {
   display: inline;
 }
-
+.prompt {
+  margin-bottom: 1.5rem;
+}
 .t1,
 button,
 input {
@@ -111,14 +113,15 @@ a:hover {
 }
 a#jokes {
   border: 2px solid #1a1765;
+  color: #1a1765;
   padding: 3px;
   border-radius: 3px;
-  background-color: #3d8edb;
-  color: rgb(224, 246, 255);
+  background-color: rgb(224, 246, 255);
   text-decoration: none;
 }
 a#jokes:hover {
-  background-color: #1f609c;
+  background-color: #3d8edb;
+  color: rgb(224, 246, 255);
 }
 button#jokes > a {
   color: rgb(224, 246, 255);
@@ -173,6 +176,9 @@ button#jokes > a:hover {
   img#bg-top {
     display: none;
   }
+  .prompt {
+    margin: 0.75rem 0;
+  }
   input#adjective {
     width: 12vh;
   }
@@ -186,11 +192,13 @@ button#jokes > a:hover {
     display: flex;
     justify-content: center;
   }
-  #mobile-btn button:hover {
+  #mobile-btn button {
     background-color: #3d8edb;
     color: rgb(224, 246, 255);
   }
-
+  #mobile-btn button:hover {
+    background-color: #1c5f9e;
+  }
   #logo {
     margin: 0;
   }

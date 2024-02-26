@@ -61,8 +61,11 @@ div.row {
   background-color: rgb(229, 243, 249);
   padding: 55px 15px 0 15px;
 }
-#welcome {
+h1 {
   display: inline;
+}
+h1.Dutch {
+  font-size: 3rem;
 }
 .prompt {
   margin-bottom: 1.5rem;
@@ -77,11 +80,9 @@ button,
 input {
   background-color: white;
 }
-input#adjective {
-  width: 15vh;
-}
+input#adjective,
 input#subject {
-  width: 19vh;
+  width: 10vw;
 }
 button:hover {
   color: rgb(224, 246, 255);
@@ -89,7 +90,7 @@ button:hover {
 }
 #response {
   background-color: white;
-  width: 39vw;
+  width: 40vw;
   overflow: hidden;
   max-width: 64vw;
   min-height: 17vh;
@@ -136,41 +137,243 @@ button#jokes > a {
 button#jokes > a:hover {
   color: #3d8edb;
 }
+#mobile-btn {
+  display: none;
+  justify-content: center;
+}
+#mobile-btn button {
+  background-color: #3d8edb;
+  color: rgb(224, 246, 255);
+}
+#mobile-btn button:hover {
+  background-color: #1c5f9e;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  margin: 0;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The language toggle slider */
+.slider {
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--sliderBG);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.lang-slider {
+  background-size: 200% 100%;
+  background-image: url("../public/lang-slider.png");
+  background-size: cover;
+}
+
+.slider:before,
+.checked {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider,
+.checked {
+  background-color: var(--sliderChecked);
+}
+input:checked + .lang-slider {
+  background-position: 100% 0;
+  -webkit-transition: background-position 0.75s;
+  -moz-transition: background-position 0.75s;
+  transition: background-position 0.75s;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.lang-toggle {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+}
 /*----------------------------------------------------Make Responsive---------------------------------------------*/
+
+@media screen and (max-width: 1151px) {
+  #response {
+    width: 53vw;
+  }
+}
+
 @media screen and (max-width: 950px) {
+  #mobile-p {
+    display: block;
+  }
+  p#desktop-p {
+    display: none !important;
+  }
+  #subject {
+    width: 41vw;
+  }
   #response {
     background-color: white;
-    width: 70vw;
+    width: 51vw;
+    padding: 1.5vw;
     overflow: hidden;
     max-width: 80vw;
     min-height: 17vh;
   }
-  input#subject,
-  input#adjective {
-    width: 10vh;
+}
+@media screen and (max-width: 909px) {
+  h1.Dutch {
+    font-size: 2.3rem;
   }
 }
-
 @media screen and (max-width: 750px) {
   #response {
     background-color: white;
-    width: 89vw;
+    width: 81vw;
     overflow: hidden;
     max-width: 91vw;
     min-height: 17vh;
   }
+  #subject {
+    width: 81vw;
+  }
 }
+@media screen and (max-width: 750px) {
+  #response {
+    background-color: white;
+    width: 81vw;
+    overflow: hidden;
+    max-width: 91vw;
+    min-height: 17vh;
+  }
+  #subject {
+    width: 81vw;
+  }
+}
+@media screen and (max-width: 710px) {
+  .dutch-prompt-form {
+    flex-direction: column;
+  }
+  input#adjective[placeholder="grappig"] {
+    width: 32vh;
+    margin-bottom: 1vh;
+  }
+}
+@media screen and (max-width: 706px) {
+  .dutch-prompt-form {
+    flex-direction: column;
+  }
+  input#subject[placeholder="honden"] {
+    width: 20vh;
+    margin-bottom: 1vh;
+  }
+}
+@media screen and (max-width: 650px) {
+  input#subject[placeholder="honden"] {
+    width: 27vw;
+  }
+}
+@media screen and (max-width: 643px) {
+  input#subject {
+    width: 51vw;
+  }
+  input#subject[placeholder="honden"] {
+    width: 45vw;
+  }
+  .prompt {
+    flex-direction: column;
+  }
+  #desktop-btn {
+    display: none;
+  }
+  #mobile-btn {
+    display: flex;
+  }
+  input#adjective {
+    width: 49vw;
+    margin-bottom: 1vh;
+  }
 
+  #response {
+    background-color: white;
+    width: 72vw;
+  }
+}
+@media screen and (max-width: 612px) {
+  h1.Dutch {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 553px) {
+  dutch-prompt-form > p {
+    text-align: center;
+  }
+  input#adjective[placeholder="grappig"],
+  input#subject[placeholder="honden"] {
+    width: 80vw;
+    text-align: center;
+    margin-bottom: 1vh;
+  }
+  #response {
+    width: 80vw;
+    max-width: 85vw;
+    height: 22vh;
+  }
+  div.dutch-prompt-form > div > button#desktop-btn {
+    background-color: #3d8edb !important;
+    color: rgb(224, 246, 255) !important;
+  }
+  div.dutch-prompt-form > div > button#desktop-btn:hover {
+    background-color: #1c5f9e !important;
+  }
+}
+@media screen and (max-width: 542px) {
+  h1.English {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 519px) {
+  input#adjective[placeholder="grappig"],
+  input#subject[placeholder="honden"] {
+    width: 75vw;
+  }
+}
 @media screen and (max-width: 500px) {
   img#logo {
     width: 30%;
+  }
+  #subject {
+    width: 71vw;
   }
   div#background {
     display: none;
   }
   .container-fluid {
     overflow: hidden;
-    height: auto !important;
   }
   div.row {
     padding: inherit;
@@ -193,41 +396,100 @@ button#jokes > a:hover {
     font-size: 1.7vh;
   }
   input#adjective {
-    width: 10vh;
+    width: 43vw;
   }
-  input#subject {
-    width: 8vh;
-  }
-  #desktop-btn {
-    display: none;
-  }
-  #mobile-btn {
-    display: flex;
-    justify-content: center;
-  }
-  #mobile-btn button {
-    background-color: #3d8edb;
-    color: rgb(224, 246, 255);
-  }
-  #mobile-btn button:hover {
-    background-color: #1c5f9e;
-  }
+
   #logo {
     margin: 0;
   }
   .footer {
-    padding-top: 22px !important;
+    padding-top: 42px !important;
   }
-  #response {
-    width: 85vw;
-    max-width: 85vw;
-    min-height: 26vh;
-  }
+
   a#jokes {
     font-size: 1.7vh;
     margin-left: 1vh;
   }
   div.joke > p {
     font-size: 1.7vh;
+  }
+}
+@media screen and (max-width: 468px) {
+  #subject[placeholder="dogs"] {
+    width: 37vw;
+  }
+}
+@media screen and (max-width: 428px) {
+  #subject {
+    width: 52vw;
+  }
+  input#adjective {
+    width: 43vw;
+  }
+  .display-4 {
+    font-size: 1.5rem;
+  }
+  div.joke {
+    flex-direction: column;
+  }
+  a#jokes {
+    width: 16vh;
+    align-self: center;
+    text-align: center;
+  }
+  span {
+    font-size: small;
+  }
+  div.footer {
+    padding: 0;
+    padding-top: 16px !important;
+  }
+}
+@media screen and (max-width: 388px) {
+  h1.Dutch {
+    font-size: 2rem;
+  }
+  input#adjective {
+    width: 45vw;
+  }
+}
+@media screen and (max-width: 360px) {
+  #subject {
+    width: 42vw;
+  }
+  #response {
+    width: 82vw;
+  }
+}
+@media screen and (max-width: 352px) {
+  h1.English {
+    font-size: 1.5rem;
+  }
+
+  input#adjective {
+    width: 16vh;
+  }
+}
+@media screen and (max-width: 324px) {
+  #subject[placeholder="dogs"],
+  input#adjective {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  h1.Dutch {
+    font-size: 1.38rem;
+  }
+  h1.English {
+    font-size: 1.52rem;
+  }
+  span.English,
+  span.Dutch {
+    font-size: 10px;
+  }
+  input#subject,
+  input#adjective {
+    width: 90vw;
   }
 }
